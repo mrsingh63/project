@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Editor & Graphic Designer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="home" class="section">
+            <div class="content">
+                <div class="left-side">
+                    <h1>I'm <span class="name">Aman Singh</span></h1>
+                    <h2>I'm a <span class="name">Video Editor</span></h2>
+                    <p class="intro">
+                       
+                    "Hi, I’m Aman Singh, a passionate and experienced video editor specializing in Adobe After Effects and Premiere Pro. With a creative eye and technical expertise, I transform raw footage into captivating visual stories. From cinematic sequences to engaging short-form content, I excel in delivering high-quality edits tailored to diverse platforms. Whether it's crafting dynamic transitions, seamless storytelling, or polished motion graphics, I’m dedicated to making every frame count. Let’s bring your vision to life!"
+                    </p>
+                </div>
+                <div class="right-side">
+                    <div class="profile-photo"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <i data-feather="film"></i>
+                    <h3>After Effects</h3>
+                    <p>Experience: <span class="years">1</span> years</p>
+                </div>
+                <div class="skill">
+                    <i data-feather="video"></i>
+                    <h3>Premiere Pro</h3>
+                    <p>Experience: <span class="years">1</span> years</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="section">
+            <h2 class="section-title">My Work</h2>
+            <div class="reel-container">
+                <div class="reel portrait">
+                    <!-- First Image -->
+                    <div class="image-item">
+                        <a href="https://www.instagram.com/filmypratap/" target="_blank">
+                            <img src="p1.png" alt="Image 1" class="portrait-image">
+                        </a>
+                    </div>
+                    <!-- Second Image -->
+                    <div class="image-item">
+                        <a href="https://www.instagram.com/filmypratap/" target="_blank">
+                            <img src="p2.png" alt="Image 2" class="portrait-image">
+                        </a>
+                    </div>
+                </div>
+                <div class="reel landscape">
+                    <!-- Third Image -->
+                    <div class="image-item">
+                        <a href="https://www.instagram.com/filmypratap/" target="_blank">
+                            <img src="l1.png" alt="Image 3" class="landscape-image">
+                        </a>
+                    </div>
+                    <!-- Fourth Image -->
+                    <div class="image-item">
+                        <a href="https://www.instagram.com/filmypratap/" target="_blank">
+                            <img src="l2.png" alt="Image 4" class="landscape-image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+        </section>
+
+        <section id="contact" class="section">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-content">
+                <div class="contact-image">
+                    <div class="square-image"></div>
+                </div>
+                <form id="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="work" placeholder="Type of Work" required>
+                    <textarea name="description" placeholder="Project Description" required></textarea>
+                    <button type="submit" class="submit-btn">
+                        <span>Submit</span>
+                        <i data-feather="send"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </div>
+    <script>
+        feather.replace();
+
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            console.log('Form submitted!');
+        });
+    </script>
+</body>
+</html>
+

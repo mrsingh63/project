@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    padding: 20px;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6b6b;
+}
+
+/* Home Section */
+#home .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.left-side {
+    flex: 1;
+}
+
+.right-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-image: url('profile2.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+.name {
+    color: #ff6b6b;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+@keyframes slide {
+    0%, 50% {
+        top: 0;
+    }
+    50.1%, 100% {
+        top: -50px;
+    }
+}
+
+.intro {
+    margin-top: 20px;
+    font-size: 1.1em;
+    max-width: 600px;
+}
+
+/* Skills Section */
+.section-title {
+    font-size: 3em;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #ff6b6b;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: #ff6b6b;
+    margin: 10px auto;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.skill {
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+}
+
+.skill i {
+    font-size: 4em;
+    margin-bottom: 20px;
+    color: #ff6b6b;
+}
+
+.years {
+    font-weight: bold;
+    color: #ff6b6b;
+}
+
+
+/* Portfolio Section */
+/* Portfolio Section */
+.reel-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.reel {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.image-item {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.image-item:hover {
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.portrait-image {
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+}
+
+.landscape-image {
+    width: 450px;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .reel-container {
+        gap: 20px;
+    }
+
+    .portrait-image, .landscape-image {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.reel-container {
+    width: 100vw;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.reel {
+    display: flex;
+    gap: 30px;
+    padding: 20px 0;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+.image-item {
+    flex: 0 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.image-item:hover {
+    transform: scale(1.05) translateY(-10px);
+    z-index: 1;
+}
+
+.placeholder {
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+.portrait .placeholder {
+    width: 300px;
+    height: 450px;
+}
+
+.landscape .placeholder {
+    width: 450px;
+    height: 300px;
+}
+
+
+/* Contact Section */
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.contact-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square-image {
+    width: 350px;
+    height: 350px;
+    background-image: url('contact.png');
+    
+   
+}
+
+form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+}
+
+input, textarea {
+    padding: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 1em;
+}
+
+.submit-btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6b6b;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255,107,107,0.4);
+}
+
+.submit-btn i {
+    transition: transform 0.3s ease;
+}
+
+.submit-btn:hover i {
+    transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #home .content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .profile-photo {
+        width: 300px;
+        height: 300px;
+        margin-bottom: 30px;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .square-image {
+        margin-bottom: 30px;
+    }
+}
+
